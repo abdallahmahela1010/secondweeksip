@@ -2,40 +2,35 @@
 
 
 let gender = (document.getElementById)("gender").value;
-let bday = parseInt(document.getElementById("day").value);
+let bday = (document.getElementById("day").value);
+let bday1 = "12/10/1996"
+
+
+  let dateOfBirth = new Date(bday1);  
+  let theDay = dateOfBirth.getDay(); 
+  document.write("Number of Day: "+theDay);
+  name1.innerText = ("Number:" + theDay) ;
+  console.log(theDay);
 
 
 let mmale = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 let ffemale = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
 
-// console.log("Script Logged")
-
-// let dayOfWeek = ( ( (19/4) -2*19-1) + ((5*96/4) ) + ((26*(12+1)/10)) + 12 ), mod 7;
-// console.log(dayOfWeek);
-
-// function akan(){
-//     if (day < 1 || > 31){
-//         name.innerHTML = "Please enter a valid day";
-//     }else if(month < 1 || > 12){
-//         name.innerHTML = "Please enter a valid month";
-//     }else{
-//         if(gender === "Male" && dayOfWeek === "sunday"){
-//             name.innerHTML = "Your akan name is" + " " + ${mmale[0]};
-//         }else if(gender === "Male" && dayOfWeek === "monday"){ 
-//             name.innerHTML = "Your akan name is" + " " + ${mmale[1]};           
-//         }
-//     }    
-    
-// }
 
 
-// function submitForm(){
-//     console.log(name)
-//     console.log("Button Clicked");
-//     name.innerText = "clicked";
-//     akan()
-// }
+function akan(){
+    if(gender === "Male" && theDay === 0  ){
+        name1.innerText = mmale[0];
+    }else if(gender === "Male" && theDay === 1){
+        name1.innerText = mmale[1];
+    }else if(gender === "Male" && theDay === 2){
+        name1.innerText = mmale[2];
+    }
+}
 
-var A = new Date('October 20, 1996');
-var Day = A.getDay();
-document.write("Number of Day: " + Day);
+function submitForm(){
+
+    akan();
+}
+
+
