@@ -1,4 +1,5 @@
 
+
 function submitForm(){ 
     let gender = (document.getElementById)("gender").value;
     let bday = (document.getElementById)("day").value;
