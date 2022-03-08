@@ -5,17 +5,14 @@ function submitForm(){
 
     let dateOfBirth = new Date(bday);  
     let theDay = dateOfBirth.getDay();
-    // name1.innerText = theDay;
-//   console.log(theDay);
+
 
   let mmale = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
   let ffemale = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
-  
-  if(bday.value===""){
-    alert("Enter Value")
-  }
 
-  if(gender === "Male" && theDay === 0  ){
+  if(bday === ""){    
+    name1.innerText = "Please enter your Birthday"
+  }else if(gender === "Male" && theDay === 0  ){
         name1.innerText = "Your Akan name is" + " " + mmale[0];
     }else if(gender === "Male" && theDay === 1){
         name1.innerText = "Your Akan name is " + " " + mmale[1];
