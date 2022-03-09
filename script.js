@@ -6,6 +6,7 @@ function submitForm(){
 
     let dateOfBirth = new Date(bday);  
     let theDay = dateOfBirth.getDay();
+    console.log(theDay)
 
 
   let mmale = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
